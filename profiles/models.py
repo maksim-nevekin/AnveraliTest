@@ -2,29 +2,36 @@ from datetime import timezone
 from django.db import models
 
 
-class BaseModel(models.Model):
-    name = models.CharField(max_length=50)
-    phone = models.IntegerField()
-    email = models.EmailField(max_length=254)    
-    experience = models.IntegerField()
+class Customer(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Имя")
+    second_name = models.CharField(max_length=50, verbose_name="Фамилия")
+    phone = models.IntegerField(verbose_name="Номер телефона")
+    email = models.EmailField(max_length=254, verbose_name="Адрес электронной почты")
+    experience = models.IntegerField(verbose_name="Опыт работы")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
-        return self.name
+        return f"{self.name[0]}.{self.second_name}"
 
-    def save(self, *args, **kwargs):
-        if not self.id:
-            super().save(*args, **kwargs)
+    class Meta:
+        abstract = False
+        verbose_name ='заказчика'
+        verbose_name_plural ='Заказчики'
 
-    def delete(self, *args, **kwargs):
-        self.updated_at = timezone.now()
-        super().delete(*args, **kwargs)    
+class Executor(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Имя")
+    second_name = models.CharField(max_length=50, verbose_name="Фамилия")
+    phone = models.IntegerField(verbose_name="Номер телефона")
+    email = models.EmailField(max_length=254, verbose_name="Адрес электронной почты")
+    experience = models.IntegerField(verbose_name="Опыт работы")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self) -> str:
+        return f"{self.name[0]}.{self.second_name}"
 
-class Сustomer(BaseModel):
-    abstract = False
-
-
-class Executor(BaseModel):
-    abstract = False
+    class Meta:
+        abstract = False
+        verbose_name ='исполнителя'
+        verbose_name_plural ='Исполнители'
