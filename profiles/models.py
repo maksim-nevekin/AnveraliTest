@@ -3,10 +3,10 @@ from django.db import models
 
 
 class BaseModel(models.Model):
-    name = models.CharField(max_length=50, verbose_name="Имя")
+    name = models.CharField(max_length=50, blank=False, verbose_name="Имя")
     second_name = models.CharField(max_length=50, verbose_name="Фамилия")
     phone = models.IntegerField(verbose_name="Номер телефона")
-    email = models.EmailField(max_length=254, verbose_name="Адрес электронной почты")
+    email = models.EmailField(max_length=254, blank=False, verbose_name="Адрес электронной почты")
     experience = models.IntegerField(verbose_name="Опыт работы")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
