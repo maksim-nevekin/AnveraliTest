@@ -137,18 +137,3 @@
     justify-content: center;
     color: rgba(255, 255, 255, 0.5);
 }
-
-
-p,
-h2,
-input,
-button {
-    font-family: Courier New, monospace;
-    font-size: 16px;
-    /* font-style: italic; */
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 24px;
-}
