@@ -1,3 +1,19 @@
+.header {
+    z-index: 3;
+    text-align: center;
+    position: fixed;
+    height: auto;
+    left: 30%;
+    width: 40%;
+    background-color: #58585827;
+    font-weight: bold;
+}
+
+.header-text {
+    color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -67,7 +83,6 @@
 .right-side:hover {
     z-index: 2;
     width: auto;
-    /* transform: scale(0.9); */
     height: auto;
     -webkit-transform: scale(1.3);
     -moz-transform: scale(1.3);
@@ -82,7 +97,7 @@
     z-index: 3;
     display: none;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(33%, -50%);
     background: white;
@@ -96,7 +111,7 @@
     z-index: 3;
     display: none;
     position: absolute;
-    top: 30%;
+    top: 40%;
     right: 50%;
     transform: translate(-26%, -50%);
     background: white;
@@ -108,16 +123,32 @@
 
 .footer {
     z-index: 3;
+    text-align: center;
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 20px;
+    height: auto;
     width: 100%;
-    background-color: #343a40;
-    padding: 10px 0;
+    background-color: #585858;
+    padding: 0;
 }
 
 .footer-text {
     justify-content: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+p,
+h2,
+input,
+button {
+    font-family: Courier New, monospace;
+    font-size: 16px;
+    /* font-style: italic; */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
 }

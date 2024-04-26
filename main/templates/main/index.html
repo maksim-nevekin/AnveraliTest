@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body style="background-color: #252525" height="100%">
+    <header class="header">
+        <p class="header-text">Впервые на нашем сайте?</p>
+        <p class="header-text">Пройдите авторизацию.</p>
+    </header>
     <div class="container">
         <div class="left-side">
             <form class="customer-form">
-                <h2>Регистрация заказчика</h2>
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Фамилия">
-                <input type="email" placeholder="Email">
-                <button>Отправить</button>
+            <h2>Регистрация заказчика</h2>
+                <center>
+                    <input  type="text" placeholder="Имя">
+                    <input type="text" placeholder="Фамилия">
+                    <input type="email" placeholder="Email">
+                    <div>
+                        <button>Отправить</button>
+                    </div>
+                </center>
             </form>
         </div>
         <div class="right-side">
@@ -30,9 +38,7 @@
     </div>
     <footer class="footer">
         <div class="footer">
-            </center>
-                <p class="footer-text">Create &copy; MNevekin 2024</p>
-            <center>
+            <p class="footer-text">Create &copy; MNevekin 2024</p>
         </div>
     </footer>
 </body>
