@@ -1,0 +1,15 @@
+#python staff
+venv/
+.pylintrc
+__pycache__/
+
+#ide stuff
+.vscode
+.idea
+
+#django staff
+db.sqlite3
+media/
+
+#django settings
+.env
