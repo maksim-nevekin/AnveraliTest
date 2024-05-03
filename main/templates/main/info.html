@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 {% endblock css %}
 
-{% block modal_cart %}
-    {% include "includes/cart_button.html" %}
-{% endblock modal_cart %}
+
 
 {% block content %}
-    <h1 class="mt-5 pt-5" style="color: rgba(255, 255, 255, 0.5);"><strong>{{ content }}</strong></h1>
+    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
+        <h2 class="m-2"><strong style="width: 20%;">{{ content }}</strong></h2>
+        <p class="m-2">{{ text_on_page }}</p>
+    </div>
 {% endblock content %}
 
 
