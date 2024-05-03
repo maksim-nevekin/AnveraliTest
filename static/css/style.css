@@ -1,20 +1,72 @@
-.header {
+body {
+    font-family: Trebuchet MS;
+    background-image: url("../images/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+  }
+
+  .dropdown-toggle::after {
+    content: none;
+  }
+  
+  .custom-shadow {
+    box-shadow: 5px 5px 25px 19px #000000;
+  }
+  
+  .product_id {
+    color: gray;
+    font-size: 15px;
+  }
+  
+  .badge.bg-warning.text-dark {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 15px 9px #000000;
+  }
+  
+  .badge-banner {
+    top: 80%;
+    border-radius: 15px;
+    font-size: 0.7rem;
+  }
+
+.my-base-header {
     z-index: 3;
     text-align: center;
+    top: 0;
     position: fixed;
     height: auto;
-    left: 30%;
-    width: 40%;
+    width: 100%;
     background-color: #58585827;
     font-weight: bold;
 }
 
-.header-text {
+.my-header {
+    z-index: 3;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background-color: #58585827;
+    font-weight: bold;
+    font-size: 0;
+}
+
+.my-header-text {
     color: rgba(255, 255, 255, 0.5);
     justify-content: center;
 }
 
-.container {
+.my-container {
     display: flex;
     height: 100vh;
     background-color: #252525;
@@ -24,7 +76,7 @@
 .left-side {
     background: url('../images/left_medium.png') center/cover;
     z-index: 1;
-    height: auto;
+    height: 100vh;
     width: auto;
     transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
@@ -54,7 +106,7 @@
 .right-side {
     background: url('../images/right_medium.png') center/cover;
     z-index: 1;
-    height: auto;
+    height: 100vh;
     width: auto;
     transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
@@ -92,6 +144,18 @@
     object-fit: contain;
 }
 
+nav {
+    font-family: Trebuchet MS;
+    z-index: 3;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background-color: #585858;
+    padding: 0;
+}
 
 .customer-form {
     z-index: 3;
@@ -121,7 +185,7 @@
 }
 
 
-.footer {
+.my-footer {
     z-index: 3;
     text-align: center;
     position: fixed;
@@ -130,10 +194,12 @@
     height: auto;
     width: 100%;
     background-color: #585858;
-    padding: 0;
+    padding: 10px 0;
 }
 
-.footer-text {
+.my-footer-text {
+    display: flex;
+    align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.5);
 }

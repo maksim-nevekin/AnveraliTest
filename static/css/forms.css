@@ -1,7 +1,7 @@
 input,
 textarea,
 select {
-    font-family: Courier New, monospace;
+    font-family: Trebuchet MS;
     height: auto;
     font-size: 14px;
     line-height: 0.5;
@@ -32,13 +32,13 @@ select {
 }
 
 label {
-    font-family: Courier New, monospace;
+    font-family: Trebuchet MS;
     display: block;
     margin-bottom: 12px;
 }
 
 button {
-    font-family: Courier New, monospace;
+    font-family: Trebuchet MS;
     display: inline-block;
     padding: 12px 24px;
     height: auto;
@@ -60,7 +60,7 @@ button:hover {
 
 p,
 h2 {
-    font-family: Courier New, monospace;
+    font-family: Trebuchet MS;
     font-size: 14px;
     font-weight: bold;
 }

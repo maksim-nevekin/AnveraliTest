@@ -1,49 +1,24 @@
+{% extends "base.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Тестовое задание от Anverali</title>
+{% block css %}
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" href="{% static "css/forms.css" %}">
-</head>
-<body style="background-color: #252525" height="100%">
-    <header class="header">
-        <p class="header-text">Впервые на нашем сайте?</p>
-        <p class="header-text">Пройдите авторизацию.</p>
-    </header>
-    <div class="container">
-        <div class="left-side">
-            <form class="customer-form" action="" method="POST">
-                {% csrf_token %}
-                <h2 style="text-align: center">Регистрация заказчика</h2>
-                <input type="text" name="name" placeholder="Имя*" required>
-                <input type="text" name="second_ame" placeholder="Фамилия">
-                <input type="email" name="email" placeholder="Email*" required>
-                <input type="phone2numeric" name="phone" placeholder="Номер телефона">
-                <input type="number" name="experience" placeholder="Опыт работы">
-                <input type="password" placeholder="Пароль*" required>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-        <div class="right-side">
-            <form class="executor-form">
-                <h2 style="text-align: center">Регистрация исполнителя</h2>
-                <input type="text" placeholder="Имя*">
-                <input type="text" placeholder="Фамилия">
-                <input type="email" placeholder="Email*">
-                <input type="phone2numeric" placeholder="Номер телефона">
-                <input type="number" placeholder="Опыт работы">
-                <input type="password" placeholder="Пароль*">
-                <button>Отправить</button>
-            </form>
-        </div>
+{% endblock css %}
+
+{% block modal_cart %}
+    {% include "includes/cart_button.html" %}
+{% endblock modal_cart %}
+
+{% block content %}
+    <h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
+{% endblock content %}
+
+
+{% block footer %}
+<footer class="my-footer">
+    <div class="my-footer">
+        <p class="my-footer-text">Create &copy; MNevekin 2024</p>
     </div>
-    <footer class="footer">
-        <div class="footer">
-            <p class="footer-text">Create &copy; MNevekin 2024</p>
-        </div>
-    </footer>
-</body>
-</html>
+</footer>
+{% endblock footer %}
