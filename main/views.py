@@ -26,15 +26,18 @@ def about(request):
     return render(request, "main/about.html", context)
 
 project = "https://github.com/maksim-nevekin/AnveraliTest/tree/main"
+telegram = "https://t.me/Jothis20"
+phone = "89200394763"
+email = "maksim.new99@gmail.com"
 
 def info(request):
     context = {
         "title": "Тестовое задание от Anverali",
         "content": "Исполнитель - Невекин Максим",
         "text_on_page": f"Страница проекта - {project}\n\
-            Telegram - https://t.me/Jothis20\n\
-            Почта - maksim.new99@gmail.com\n\
-            Телефон - 89200394763",
+            Telegram - {telegram}\n\
+            Почта - {email}\n\
+            Телефон - {phone}",
     }
 
     return render(request, "main/info.html", context)
